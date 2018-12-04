@@ -153,11 +153,11 @@ API could be contacted by setting `url: http://<kubernetes_cluster_ip>:{{
 svc.result.spec.ports[0].nodePort }}`.
 
 The `user` and `password` variables are defined in
-`roles/Bitd/defaults/main.yml` which are harcoded for simplicity in this
-example. Ideally the credentials are passed in as a secret and read from
+`roles/Bitd/defaults/main.yml` which are hardcoded for simplicity in this
+example. Ideally, the credentials are passed in as a secret and read from
 Ansible.
 
-### Determining if node is synced
+### Determining if a node is synced
 Using the `chaininfo` object, we can set a new fact to determine whether or not
 the node is synced or not. To do this, we will use the `set_fact` Ansible
 module to determine if the last validated block number equals the block header
@@ -188,7 +188,7 @@ these are values we have already determined, so the task is very simple:
     synced: "{{ synced }}"
 ```
 
-## Final look at the role
+## A final look at the role
 Here is what `roles/Bitd/tasks/main.yml` should now look like:
 ```yaml
 ---
