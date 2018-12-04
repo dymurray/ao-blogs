@@ -9,7 +9,7 @@ run which are set in the Custom Resource's `status` subresource.
 
 ## Ansible Operator's existing status management
 Ansible Operator by default provides useful information about the Ansible run
-by updating the CR's status subresource with output of the run. This output
+by updating the CR's status subresource with the output of the run. This output
 includes the number of `changed`, `ok`, and `failed` tasks in the previous run
 along with an associated error message if it exists. An example output is shown
 below:
@@ -71,7 +71,7 @@ undefined, Ansible Operator will maintain status updates with the Ansible run's
 output as shown above. Note that this does not prevent the user from also
 updating the CR status with custom key/value pairs when `manageStatus` is
 `true`. When `manageStatus` is `false`, Ansible Operator expects the status to
-be maintained soley from within Ansible using the `k8s_status` module and will
+be maintained solely from within Ansible using the `k8s_status` module and will
 not publish the output of the runs to the CR status.
 
 [k8s_status_module]:https://github.com/fabianvf/ansible-k8s-status-module
