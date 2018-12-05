@@ -1,15 +1,15 @@
 # Managing Status with Ansible Operator
 When containerizing an application in Kubernetes, I found that it was difficult
-when to determine an application was truly "Ready" as some applications have a
+to determine when an application was truly "Ready" as some applications have a
 long start-up time where Kubernetes' liveness and readiness probes don't
 provide enough granular support to monitor an application's endpoint looking
 for specific data.
 
-I decided to create an example of using an Ansible Operator to deploy my
+I decided to create an example using an Ansible Operator to deploy my
 application and update the Custom Resource's `status` subresource with the
 state of an available API endpoint. The application we will use is a
-containerized Bitcoin application. While the pod is in a `Running` state, it is
-actually performing a long-running syncing process which is downloading a bunch
+containerized Bitcoin application. While the pod is in the `Running` state, it is
+actually performing a long-running syncing process downloading a bunch
 of data from the blockchain. Since other applications will not be able to use
 our node reliably until the sync is complete, I want the Ansible tasks to check
 the state of the available JSON-RPC API that the application exposes and update
@@ -34,12 +34,6 @@ Our task for this blog will be to add a `k8s_status` Ansible task that reports
 data from an endpoint on our `Bitd` service and updates the `Bitd`'s Custom
 Resource with this data.
 
-### Optional: Create the project from scratch
-If you would like to start with a barebones project, the above skeleton can be
-created with:
-```bash
-$ operator-sdk new --type ansible --kind Bitd --api-version bitcoin.example.com/v1 bitcoin-operator
-```
 ## Reporting RPC API Endpoints to Custom Resource Status
 ### Registering a service
 In order to get the data from our endpoint, we need to ensure that our operator
