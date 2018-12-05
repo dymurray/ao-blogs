@@ -1,13 +1,15 @@
 # Managing Status with Ansible Operator
-In v1.11.0 of Kubernetes, Custom Resources (CRs) have a mutable `status` object in
-the CR's subresources field. As a first iteration, Ansible Operator managed the
-status of a Custom Resource for the user. The Ansible Operator surfaces generic
-conditions status of the Ansible run such as the result of the run tasks and
-any failure messages from the run. While this information is useful, it is
-desired that the user is able to supply custom key-value pairs from the Ansible
-run which are set in the Custom Resource's `status` subresource.
+In v1.11.0 of Kubernetes, Custom Resources (CRs) have a mutable `status` object
+in the CR's subresources field. With this subresource, Ansible Operator allows
+you 3 modes for managing status:
+* Ansible Operator binary adds generic information about Ansible runs (Default)
+* Both Ansible Operator binary and Ansible code are able to update status with generic and customized information
+* Solely maintained from within Ansible code
 
-## Ansible Operator's existing status management
+This allows you as the developer to take full control over what you would like
+to be populated in the Custom Resource's status field.
+
+## Ansible Operator's default status management
 Ansible Operator by default provides useful information about the Ansible run
 by updating the CR's status subresource with the output of the run. This output
 includes the number of `changed`, `ok`, and `failed` tasks in the previous run
