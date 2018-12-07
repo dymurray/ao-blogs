@@ -76,4 +76,10 @@ updating the CR status with custom key/value pairs when `manageStatus` is
 be maintained solely from within Ansible using the `k8s_status` module and will
 not publish the output of the runs to the CR status.
 
+# Example Operator Managing Status
+Now that you have a brief overview of managing status with the Ansible
+Operator, learn how to [create your own][status_example_blog] Ansible Operator
+that provides custom status updates.
+
 [k8s_status_module]:https://github.com/fabianvf/ansible-k8s-status-module
+[status_example_blog]:./status-example.md
