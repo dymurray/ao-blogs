@@ -60,7 +60,7 @@ can communicate with the deployed application. Let's look at the tasks in
           - ReadWriteOnce
         resources:
           requests:
-            storage: 20Gi
+            storage: 20Gi # Ideally 200Gi minimum for our application but for an example not needed
 
 # tasks file for Bitd
 - name: start bitd
@@ -205,7 +205,7 @@ Here is what `roles/Bitd/tasks/main.yml` should now look like:
           - ReadWriteOnce
         resources:
           requests:
-            storage: 20Gi
+            storage: 20Gi # Ideally 200Gi minimum for this application but not needed for an example
 
 # tasks file for Bitd
 - name: start bitd
@@ -381,3 +381,5 @@ granular control of the Custom Resource and opens up many more possibilities
 with Ansible Operator. A way to extend this example would be to have a
 dependent application watching the status of `Bitd` and perform it's deployment
 when `synced` is set to `true`.
+
+To see an up-to-date maintained version of the Bitcoin Operator, go [here](https://github.com/dymurray/bitcoin-operator)
