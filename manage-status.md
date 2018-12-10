@@ -7,7 +7,8 @@ you 3 modes for managing status:
 * Solely maintained from within Ansible code
 
 This allows you as the developer to take full control over what you would like
-to be populated in the Custom Resource's status field.
+to be populated in the Custom Resource's status field without needing Golang
+expertise and just the simplicity of Ansible.
 
 ## Ansible Operator's default status management
 Ansible Operator by default provides useful information about the Ansible run
