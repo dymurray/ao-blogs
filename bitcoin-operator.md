@@ -6,6 +6,15 @@ logic for installation, deployment, and lifecycle management all inside of an
 operator. An Operator allows us to package, deploy, and manage a Kubernetes
 application (Bitcoin).
 
+## Clone the Bitcoin Operator source
+I have created the Bitcoin Operator using Operator-SDK. This provides us with
+all of the needed resource files already created so that deploying the operator
+is simple. To get started, clone the repo:
+```bash
+$ git clone https://github.com/dymurray/bitcoin-operator
+$ cd bitcoin-operator
+```
+
 ## Deploying Bitcoin Operator
 To deploy the operator, we need to create the relevant RBAC resources along
 with the Custom Resource Definition (CRD) of our Bitcoin application.
