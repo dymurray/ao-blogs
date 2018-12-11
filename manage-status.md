@@ -1,4 +1,9 @@
 # Managing Status with Ansible Operator
+In this blog post we will show how you, a developer of an Operator, now have
+several options for managing the status of your Custom Resources when using
+[Ansible
+Operator](https://github.com/operator-framework/operator-sdk/blob/master/doc/ansible/user-guide.md)
+
 In v1.11.0 of Kubernetes, Custom Resources (CRs) have a mutable `status` object
 in the CR's subresources field. With this subresource, Ansible Operator allows
 you 3 modes for managing status:

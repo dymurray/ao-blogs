@@ -1,4 +1,8 @@
 # Managing Status with Ansible Operator
+This is part 2 of 2 continuing with an example. Please see [part
+1](https://github.com/dymurray/ao-blogs/blog/master/manage-status.md) before
+proceeding.
+
 When containerizing an application in Kubernetes, I found that it was difficult
 when to determine an application was truly "Ready" as some applications have a
 long start-up time where Kubernetes' liveness and readiness probes don't
@@ -382,4 +386,5 @@ with Ansible Operator. A way to extend this example would be to have a
 dependent application watching the status of `Bitd` and perform it's deployment
 when `synced` is set to `true`.
 
-To see an up-to-date maintained version of the Bitcoin Operator, go [here](https://github.com/dymurray/bitcoin-operator)
+To see an up-to-date maintained version of the Bitcoin Operator, go
+[here](https://github.com/dymurray/bitcoin-operator)
