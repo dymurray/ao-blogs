@@ -388,3 +388,14 @@ when `synced` is set to `true`.
 
 To see an up-to-date maintained version of the Bitcoin Operator, go
 [here](https://github.com/dymurray/bitcoin-operator)
+
+# Learn more about Ansible Operator
+You can begin to build your own Operators using Ansible by downloading the
+[0.3.0
+Release](https://github.com/operator-framework/operator-sdk/releases/tag/v0.3.0)
+of Operator SDK and following our [user
+guide](https://github.com/operator-framework/operator-sdk/blob/master/doc/ansible/user-guide.md).
+Please subscribe to the [Operator Framework mailing
+list](https://groups.google.com/forum/#!forum/operator-framework) where you can
+ask us questions and follow the latest development progress.
+
