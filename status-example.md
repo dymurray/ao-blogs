@@ -1,6 +1,6 @@
 # Managing Status with Ansible Operator
 This is part 2 of 2 continuing with an example. Please see [part
-1](https://github.com/dymurray/ao-blogs/blog/master/manage-status.md) before
+1](https://github.com/dymurray/ao-blogs/blob/master/manage-status.md) before
 proceeding.
 
 When containerizing an application in Kubernetes, I found that it was difficult
