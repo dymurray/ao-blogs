@@ -1,4 +1,4 @@
-# Managing Status with Ansible Operator
+# Example of Managing Status with Ansible Operator
 This is part 2 of 2 continuing with an example. Please see [part
 1](https://github.com/dymurray/ao-blogs/blob/master/manage-status.md) before
 proceeding.
